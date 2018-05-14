@@ -1,5 +1,5 @@
 package utiles;
 
 public class Constantes {
-	public static final int MAXIMOCARACTERES = 685;
+	public static final int MAXIMOCARACTERES = 555;
 }

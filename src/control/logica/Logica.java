@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 import modelo.Legible;
 import modelo.Pagina;
+import utiles.Constantes;
 
 public class Logica implements Legible{
 	private int actual = 0;
@@ -28,7 +29,7 @@ public class Logica implements Legible{
 	}
 	public String getLectura() {
 		try {
-			caracteres= new char[685];
+			caracteres= new char[Constantes.MAXIMOCARACTERES];
 			FileReader fileR = new FileReader(ruta);
 			for (int i = 0; i <= actual; i++) {
 				fileR.read(caracteres);
