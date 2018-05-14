@@ -33,16 +33,19 @@ public class Logica implements Legible{
 			FileReader fileR = new FileReader(ruta);
 			for (int i = 0; i <= actual; i++) {
 				fileR.read(caracteres);
+				
 			}
-			
+			fileR.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}		
-		return new String(caracteres);
+		return reemplazarSaltosDeLinea( new String(caracteres));
 	}
 
-	
+	private String reemplazarSaltosDeLinea(String generearPaginaSegunPalabraPartida) {
+		return new String(generearPaginaSegunPalabraPartida.replaceAll("\r", "").replaceAll("\n", " "));
+	}
 
 	@Override
 	public void retrocederPagina() {
